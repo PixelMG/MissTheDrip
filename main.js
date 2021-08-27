@@ -4,7 +4,7 @@ class Game
 	{
 		this.width = document.documentElement.clientWidth // width
 		this.height = document.documentElement.clientHeight // height
-		this.debounce = 0
+		this.debounce = 25
 
 		this.Init()
 	}
@@ -53,6 +53,7 @@ class Game
 				input.mouseY <= object.y + object.h)
 			{
 				this.objects = []
+                                this.debounce = 25
 				alert('You LOSE! You get NOTHING!')
 				break
 			}
